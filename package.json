@@ -13,11 +13,15 @@
     "dev": "DEBUG=nuxt:* nodemon bin/nuxt",
     "test": "npm run lint",
     "lint": "eslint --ext .js,.vue bin lib pages test index.js --ignore-pattern lib/app",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "debug:dev": "bin/nuxt examples/async-data",
+    "debug:build": "bin/nuxt build  examples/async-data",
+    "debug:start": "nodemon bin/nuxt start  examples/async-data"
   },
   "dependencies": {
     "ansi-html": "^0.0.6",
     "autoprefixer": "^6.5.1",
+    "axios": "0.15.3",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
